@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloce & Co.</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+</head>
+
+<body>
+    <nav
+        class="flex flex-wrap bg-black text-white items-center font-jakarta-sans p-5 w-full justify-between gap-y-4 md:gap-y-0 lg:px-10">
+        <div>
+            <span class="text-lg font-playfair lg:text-3xl">Veloce <span class="text-sm lg:text-xl">& Co.</span></span>
+        </div>
+
+        <div
+            class="flex gap-4 items-center justify-center w-full md:w-auto order-last md:order-none md:ml-10 lg:gap-10">
+            <a href="#home" class="text-sm hover:text-[#2563EB] lg:text-base transition-colors">Home</a>
+            <a href="#shop" class="text-sm hover:text-[#2563EB] lg:text-base transition-colors">Shop</a>
+            <a href="#category" class="text-sm hover:text-[#2563EB] lg:text-base transition-colors">Category</a>
+            <a href="#contact" class="text-sm hover:text-[#2563EB] lg:text-base transition-colors">Contact</a>
+        </div>
+
+        <div class="flex space-x-5 items-center lg:gap-7">
+            <a class="hover:opacity-80" href="#category">
+                <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://w3.org" class="lg:w-5 lg:h-5">
+                    <path
+                        d="M19.1509 16.8491C18.6239 16.3445 18.1111 15.8253 17.613 15.2921C17.1945 14.8669 16.9425 14.5575 16.9425 14.5575L13.7925 13.0534C15.0538 11.6232 15.7498 9.7819 15.75 7.875C15.75 3.53363 12.2175 0 7.875 0C3.5325 0 0 3.53363 0 7.875C0 12.2164 3.5325 15.75 7.875 15.75C9.85838 15.75 11.6663 15.0075 13.0534 13.7936L14.5575 16.9436C14.5575 16.9436 14.8669 17.1956 15.2921 17.6141C15.7275 18.0225 16.3001 18.5749 16.8491 19.152L18.3769 20.718L19.0564 21.4447L21.4425 19.0586L20.7158 18.3791C20.2894 17.9606 19.7201 17.4049 19.1509 16.8491ZM7.875 13.5C4.77338 13.5 2.25 10.9766 2.25 7.875C2.25 4.77338 4.77338 2.25 7.875 2.25C10.9766 2.25 13.5 4.77338 13.5 7.875C13.5 10.9766 10.9766 13.5 7.875 13.5Z"
+                        fill="white" />
+                </svg>
+            </a>
+
+            <button class="hover:opacity-80">
+                <svg width="20" height="18" viewBox="0 0 25 23" fill="none" xmlns="http://w3.org" class="lg:w-5 lg:h-5">
+                    <path
+                        d="M6.75 1.125C3.64388 1.125 1.125 3.618 1.125 6.69375C1.125 9.17662 2.10938 15.0694 11.799 21.0263C11.9728 21.1313 12.172 21.1868 12.375 21.1868C12.578 21.1868 12.7772 21.1313 12.951 21.0263C22.6418 15.0694 23.625 9.17662 23.625 6.69375C23.625 3.618 21.1061 1.125 18 1.125C14.8939 1.125 12.375 4.5 12.375 4.5C12.375 4.5 9.85612 1.125 6.75 1.125Z"
+                        stroke="white" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <button class="hover:opacity-80 ">
+                <svg width="18" height="18" viewBox="0 0 21 21" fill="none" xmlns="http://w3.org" class="lg:w-5 lg:h-5">
+                    <path
+                        d="M17.1225 14.0682L5.295 15.0004L4.5135 12.0004H4.1115C3.0825 12.0004 2.241 13.0054 2.241 14.1642V14.2504C2.241 15.4564 3.14325 16.5004 4.2165 16.5004H20.25C20.6603 16.5004 21 16.7869 21 17.2174C21 17.6479 20.6648 18.0004 20.2545 18.0004H4.18575C2.29275 18.0004 0.75 16.3174 0.75 14.2504V14.1642C0.75 12.1444 2.25525 10.5004 4.1115 10.5004H4.12275L4.11975 10.4914C4.0383 10.4743 3.96497 10.4303 3.91151 10.3666C3.85806 10.3028 3.82759 10.2229 3.825 10.1397V10.1112C3.82512 10.0598 3.83646 10.0091 3.85823 9.96262C3.87999 9.91611 3.91165 9.87492 3.951 9.84193L1.9725 2.25043H18.6C19.92 2.25043 21 3.32443 21 4.69018L20.61 11.0614C20.4975 12.9492 18.72 13.9414 17.1225 14.0682ZM6.288 9.75043H7.5V6.75043H5.54625L6.288 9.75043ZM5.361 6.00043H7.5V3.75568L6.0375 3.75718C5.4075 3.75718 4.95 4.33918 5.1 4.94368L5.361 6.00043ZM8.25 3.75493V6.00043H11.535V3.75043L8.25 3.75493ZM12.285 3.74968V6.00043H15.735V3.74593L12.285 3.74968ZM16.485 3.74518V6.00043H19.4167L19.5 4.64518C19.5 4.14568 19.095 3.74218 18.5925 3.74218L16.485 3.74518ZM19.3703 6.75043H16.485V9.75043H19.185L19.3703 6.75043ZM19.1393 10.5004H16.485V12.6229L16.995 12.5832C18 12.5007 19.05 11.9269 19.11 10.9714L19.1393 10.5004ZM15.735 12.6829V10.5004H12.285V12.9544L15.735 12.6829ZM11.535 13.0129V10.5004H8.25V13.2154C8.25 13.2349 8.2485 13.2539 8.2455 13.2724L11.535 13.0129ZM7.5 13.2004V10.5004H6.47325L6.9825 12.5607C7.01595 12.699 7.07973 12.8282 7.16923 12.9388C7.25873 13.0495 7.37172 13.1388 7.5 13.2004ZM11.535 6.75043H8.25V9.75043H11.535V6.75043ZM15.735 6.75043H12.285V9.75043H15.735V6.75043Z"
+                        fill="white" />
+                    <path
+                        d="M5.39693 15.7279C5.81843 15.6297 6.08093 15.2119 5.97743 14.8092L2.31443 0.576405C2.21093 0.173655 1.77368 -0.0768449 1.35293 0.0214051C0.931427 0.120405 0.668927 0.538905 0.772427 0.941655L4.43543 15.1729C4.53893 15.5832 4.96793 15.8262 5.39693 15.7279Z"
+                        fill="white" />
+                    <path
+                        d="M2.25 1.50043H0.75C0.3375 1.50043 0 1.16293 0 0.750427C0 0.337927 0.3375 0.000427246 0.75 0.000427246H2.25C2.6625 0.000427246 3 0.337927 3 0.750427C3 1.16293 2.6625 1.50043 2.25 1.50043ZM18.375 20.2504C18.0766 20.2504 17.7905 20.1319 17.5795 19.9209C17.3685 19.7099 17.25 19.4238 17.25 19.1254C17.25 18.8271 17.3685 18.5409 17.5795 18.3299C17.7905 18.119 18.0766 18.0004 18.375 18.0004C18.6734 18.0004 18.9595 18.119 19.1705 18.3299C19.3815 18.5409 19.5 18.8271 19.5 19.1254C19.5 19.4238 19.3815 19.7099 19.1705 19.9209C18.9595 20.1319 18.6734 20.2504 18.375 20.2504ZM4.875 20.2504C4.57663 20.2504 4.29048 20.1319 4.07951 19.9209C3.86853 19.7099 3.75 19.4238 3.75 19.1254C3.75 18.8271 3.86853 18.5409 4.07951 18.3299C4.29048 18.119 4.57663 18.0004 4.875 18.0004C5.17337 18.0004 5.45952 18.119 5.67049 18.3299C5.88147 18.5409 6 18.8271 6 19.1254C6 19.4238 5.88147 19.7099 5.67049 19.9209C5.45952 20.1319 5.17337 20.2504 4.875 20.2504Z"
+                        fill="white" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <section
+        class="bg-black text-white py-5 lg:flex lg:justify-center lg:px-16 lg:items-center lg:gap-10 lg:py-16  md:flex md:justify-center md:items-center md:gap-10 md:py-16 md:px-11"
+        id="home">
+
+        <div
+            class="flex flex-col gap-4 justify-center  max-w-2xl mx-auto px-4 text-left lg:gap-10 items-center md:items-start">
+            <h1
+                class="text-2xl lg:text-5xl font-bold tracking-widest lg:max-w-lg md:text-xl md:max-w-sm max-w-60 mr-auto">
+                Timeless <span class="font-playfair">Elegance</span> on Your Wrist
+            </h1>
+            <span class="text-sm lg:text-xl lg:max-w-lg text-zinc-400 md:text-sm">
+                Crafted for precision. Designed for the modern lifestyle. Discover premium essentials built without
+                compromise.
+            </span>
+            <a href="#category"
+                class="w-max bg-white text-black md:text-base my-7 py-2 px-5 text-xs lg:text-lg lg:px-6 lg:py-3 font-semibold rounded-full hover:text-white hover:bg-[#2563EB] transition-colors">
+                <span>Explore Collection</span>
+            </a>
+        </div>
+
+        <div class="py-3">
+            <img src="Images/Luxury Tommy Hilfiger Chronograph Watch Cutout.png" alt="Luxury Men's Watch Collection"
+                class="lg:w-[600px] md:w-[500px] w-full h-auto mt-3">
+        </div>
+    </section>
+    <section
+        class="flex flex-col py-5 justify-center lg:flex lg:items-center lg:justify-center items-center gap-4  text-center lg:py-16 lg:gap-16 md:py-11 md:px-11">
+        <div class="text-center ">
+            <h1 class="text-xl font-bold lg:text-3xl md:text-2xl">Explore Categories</h1>
+            <span class="text-base pt-4  lg:text-lg lg:pt-7 md:text-base  ">Find what fits your style and daily
+                routine.</span>
+        </div>
+        <div
+            class="grid grid-cols-2 gap-x-4 gap-y-6 w-full max-w-md mx-auto px-2 justify-items-center py-5 lg:flex lg:items-center lg:justify-center lg:gap-20 lg:max-w-7xl md:gap-x-8 md:gap-y-8">
+
+
+
+            <!-- ======1st card======= -->
+            <div class="flex flex-col gap-2 lg:gap-8">
+                <img src="Images/explorebag.jpeg" alt="bag"
+                    class="w-36 h-36 lg:w-60 lg:h-60 rounded-xl object-cover shadow-lg lg:shadow-xl md:h-48 md:w-48 md:object-cover border-2 border-gray-200">
+                <div class="flex flex-col gap-1 items-start">
+                    <span class="text-base font-bold lg:text-2xl md:text-xl">Bags</span>
+                    <a href="#category" class=" inline-flex items-center gap-1 text-sm lg:text-xl md:text-lg font-bold text-[#2563EB]
+                        hover:opacity-80 transition-opacity">
+                        <span>Explore Collection</span>
+                        <svg width="11" height="9" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="shrink-0 lg:w-6 lg:h-8 md:w-4 md:h-7">
+                            <path
+                                d="M15.4408 2.65535C15.1758 2.35604 15.0316 1.96015 15.0384 1.55109C15.0453 1.14204 15.2027 0.751753 15.4775 0.462463C15.7524 0.173172 16.1232 0.00746329 16.5118 0.000245994C16.9004 -0.0069713 17.2765 0.144866 17.5609 0.423772L25.5613 8.84483C25.8422 9.14088 26 9.54219 26 9.96062C26 10.379 25.8422 10.7804 25.5613 11.0764L17.5609 19.4975C17.4236 19.6526 17.258 19.777 17.0739 19.8633C16.8899 19.9496 16.6913 19.996 16.4899 19.9998C16.2885 20.0035 16.0884 19.9645 15.9016 19.8851C15.7148 19.8057 15.5452 19.6875 15.4027 19.5375C15.2603 19.3876 15.148 19.209 15.0725 19.0124C14.9971 18.8158 14.96 18.6052 14.9636 18.3932C14.9671 18.1812 15.0112 17.9721 15.0932 17.7784C15.1752 17.5847 15.2934 17.4104 15.4408 17.2659L20.8811 11.5396H1.50008C1.10223 11.5396 0.720681 11.3732 0.439362 11.0771C0.158043 10.781 0 10.3794 0 9.96062C0 9.54185 0.158043 9.14024 0.439362 8.84413C0.720681 8.54802 1.10223 8.38167 1.50008 8.38167H20.8811L15.4408 2.65535Z"
+                                fill="#2563EB" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- ======2nd card======= -->
+            <div class="flex flex-col gap-2 lg:gap-8">
+                <img src="Images/exlorewatch.jpeg" alt="Watch"
+                    class="w-36 h-36  lg:w-60 lg:h-60 rounded-xl object-cover shadow-lg md:h-48 md:w-48 md:object-cover border-2 border-gray-200">
+                <div class="flex flex-col gap-1 items-start">
+                    <span class="text-md font-bold lg:text-2xl md:text-xl">Watches</span>
+                    <a href="#category" class=" inline-flex items-center gap-1 text-sm lg:text-xl md:text-lg font-bold text-[#2563EB]
+                        hover:opacity-80 transition-opacity">
+                        <span>Explore Collection</span>
+                        <svg width="11" height="9" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="shrink-0 lg:w-6 lg:h-8 md:w-4 md:h-7">
+                            <path
+                                d="M15.4408 2.65535C15.1758 2.35604 15.0316 1.96015 15.0384 1.55109C15.0453 1.14204 15.2027 0.751753 15.4775 0.462463C15.7524 0.173172 16.1232 0.00746329 16.5118 0.000245994C16.9004 -0.0069713 17.2765 0.144866 17.5609 0.423772L25.5613 8.84483C25.8422 9.14088 26 9.54219 26 9.96062C26 10.379 25.8422 10.7804 25.5613 11.0764L17.5609 19.4975C17.4236 19.6526 17.258 19.777 17.0739 19.8633C16.8899 19.9496 16.6913 19.996 16.4899 19.9998C16.2885 20.0035 16.0884 19.9645 15.9016 19.8851C15.7148 19.8057 15.5452 19.6875 15.4027 19.5375C15.2603 19.3876 15.148 19.209 15.0725 19.0124C14.9971 18.8158 14.96 18.6052 14.9636 18.3932C14.9671 18.1812 15.0112 17.9721 15.0932 17.7784C15.1752 17.5847 15.2934 17.4104 15.4408 17.2659L20.8811 11.5396H1.50008C1.10223 11.5396 0.720681 11.3732 0.439362 11.0771C0.158043 10.781 0 10.3794 0 9.96062C0 9.54185 0.158043 9.14024 0.439362 8.84413C0.720681 8.54802 1.10223 8.38167 1.50008 8.38167H20.8811L15.4408 2.65535Z"
+                                fill="#2563EB" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- ======3rd card======= -->
+            <div class="flex flex-col gap-2 lg:gap-8">
+                <img src="Images/exploreshoes.jpeg" alt="Shoes"
+                    class="w-36 h-36 lg:w-60 lg:h-60 rounded-xl object-cover shadow-lg md:h-48 md:w-48 md:object-cover border-2 border-gray-200">
+                <div class="flex flex-col gap-1 items-start">
+                    <span class="text-md font-bold lg:text-2xl md:text-xl"">Shoes</span>
+                    <a href=" #category" class=" inline-flex items-center gap-1 text-sm lg:text-xl md:text-lg font-bold text-[#2563EB]
+                        hover:opacity-80 transition-opacity">
+                        <span>Explore Collection</span>
+                        <svg width="11" height="9" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="shrink-0 lg:w-6 lg:h-8 md:w-4 md:h-7">
+                            <path
+                                d="M15.4408 2.65535C15.1758 2.35604 15.0316 1.96015 15.0384 1.55109C15.0453 1.14204 15.2027 0.751753 15.4775 0.462463C15.7524 0.173172 16.1232 0.00746329 16.5118 0.000245994C16.9004 -0.0069713 17.2765 0.144866 17.5609 0.423772L25.5613 8.84483C25.8422 9.14088 26 9.54219 26 9.96062C26 10.379 25.8422 10.7804 25.5613 11.0764L17.5609 19.4975C17.4236 19.6526 17.258 19.777 17.0739 19.8633C16.8899 19.9496 16.6913 19.996 16.4899 19.9998C16.2885 20.0035 16.0884 19.9645 15.9016 19.8851C15.7148 19.8057 15.5452 19.6875 15.4027 19.5375C15.2603 19.3876 15.148 19.209 15.0725 19.0124C14.9971 18.8158 14.96 18.6052 14.9636 18.3932C14.9671 18.1812 15.0112 17.9721 15.0932 17.7784C15.1752 17.5847 15.2934 17.4104 15.4408 17.2659L20.8811 11.5396H1.50008C1.10223 11.5396 0.720681 11.3732 0.439362 11.0771C0.158043 10.781 0 10.3794 0 9.96062C0 9.54185 0.158043 9.14024 0.439362 8.84413C0.720681 8.54802 1.10223 8.38167 1.50008 8.38167H20.8811L15.4408 2.65535Z"
+                                fill="#2563EB" />
+                        </svg>
+                        </a>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- ======4th card======= -->
+            <div class="flex flex-col gap-2 lg:gap-8">
+                <img src="Images/explroehead.jpeg" alt="Headphones"
+                    class="w-36  h-36 lg:w-60 lg:h-60 rounded-xl object-cover  shadow-lg md:h-48 md:w-48 md:object-cover border-2 border-gray-200">
+                <div class="flex flex-col gap-1 items-start">
+                    <span class="text-md font-bold lg:text-2xl md:text-xl"">Headphones</span>
+                     <a href=" #category" class=" inline-flex items-center gap-1 text-sm lg:text-xl md:text-lg font-bold text-[#2563EB]
+                        hover:opacity-80 transition-opacity">
+                        <span>Explore Collection</span>
+                        <svg width="11" height="9" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="shrink-0 lg:w-6 lg:h-8 md:w-4 md:h-7">
+                            <path
+                                d="M15.4408 2.65535C15.1758 2.35604 15.0316 1.96015 15.0384 1.55109C15.0453 1.14204 15.2027 0.751753 15.4775 0.462463C15.7524 0.173172 16.1232 0.00746329 16.5118 0.000245994C16.9004 -0.0069713 17.2765 0.144866 17.5609 0.423772L25.5613 8.84483C25.8422 9.14088 26 9.54219 26 9.96062C26 10.379 25.8422 10.7804 25.5613 11.0764L17.5609 19.4975C17.4236 19.6526 17.258 19.777 17.0739 19.8633C16.8899 19.9496 16.6913 19.996 16.4899 19.9998C16.2885 20.0035 16.0884 19.9645 15.9016 19.8851C15.7148 19.8057 15.5452 19.6875 15.4027 19.5375C15.2603 19.3876 15.148 19.209 15.0725 19.0124C14.9971 18.8158 14.96 18.6052 14.9636 18.3932C14.9671 18.1812 15.0112 17.9721 15.0932 17.7784C15.1752 17.5847 15.2934 17.4104 15.4408 17.2659L20.8811 11.5396H1.50008C1.10223 11.5396 0.720681 11.3732 0.439362 11.0771C0.158043 10.781 0 10.3794 0 9.96062C0 9.54185 0.158043 9.14024 0.439362 8.84413C0.720681 8.54802 1.10223 8.38167 1.50008 8.38167H20.8811L15.4408 2.65535Z"
+                                fill="#2563EB" />
+                        </svg>
+                        </a>
+                </div>
+            </div>
+
+
+
+
+    </section>
+
+
+
+
+    <section class="flex flex-col py-5 justify-center items-center gap-4 text-center md:py-11 lg:py-16" id="shop">
+        <div class="text-center">
+            <h1 class="text-xl font-bold md:text-2xl lg:text-3xl ">Featured Products</h1>
+            <span class="text-base max-w-5 pt-4 md:text-lg md:pt-8 lg:text-lg">Handpicked luxury essentials designed for
+                performance and style.</span>
+        </div>
+        <div
+            class="grid grid-cols-2 gap-x-4 gap-y-6 w-full max-w-md mx-auto px-2 justify-items-center py-5 lg:flex lg:items-center lg:justify-center lg:gap-20 lg:max-w-7xl md:gap-x-8 md:gap-y-8">
+
+
+
+
+            <!-- ======1st card======= -->
+            <div class="flex flex-col gap-3  font-jakarta-sans text-left lg:gap-8">
+                <div class="relative rounded-xl overflow-hidden shadow-lg ">
+                    <img src="Images/featbag.jpeg" alt="Veloce Leather Tote"
+                        class="w-36 h-40 object-cover lg:w-60 lg:h-60 md:h-48 md:w-48 md:object-cover border-2 border-gray-200">
+                    <button
+                        class="absolute top-3 right-3 text-slate-700 transition-colors duration-200 focus:outline-none drop-shadow-md hover:text-black">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="wish w-5 h-5 lg:w-7 lg:h-7 transition-colors duration-200">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </button>
+
+                </div>
+                <div class="flex flex-col gap-1 px-1">
+                    <h3 class="text-sm font-semibold text-black tracking-tight leading-tight md:text-base lg:text-lg">
+                        Veloce Leather Tote</h3>
+                    <span class="text-md font-bold text-[#2563EB] md:text-lg lg:text-2xl">$449.00</span>
+                </div>
+                <button
+                    class="cart w-full bg-black text-white text-xs md:text-sm lg:text-lg font-semibold py-2.5 rounded-lg hover:bg-zinc-800 transition-colors duration-200 shadow-sm">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+            <!-- ======2nd card======= -->
+            <div class="flex flex-col gap-3  font-jakarta-sans text-left lg:gap-8">
+                <div class="relative rounded-xl overflow-hidden shadow-lg ">
+                    <img src="Images/featwatch.jpeg" alt="Veloce Chronograph Pro"
+                        class="wish  w-36 h-40 object-cover md:h-48 md:w-48 md:object-cover lg:w-60 lg:h-60 border-2 border-gray-200">
+                    <button
+                        class="absolute top-3 right-3 text-slate-700 transition-colors duration-200 focus:outline-none drop-shadow-md hover:text-black">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="wish w-5 h-5 lg:w-7 lg:h-7 transition-colors duration-200">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </button>
+
+                </div>
+                <div class="flex flex-col gap-1 px-1">
+                    <h3 class="text-sm font-semibold text-black tracking-tight leading-tight md:text-base lg:text-lg">
+                        Veloce Chronograph</h3>
+                    <span class="text-md font-bold text-[#2563EB] md:text-lg lg:text-2xl">$449.00</span>
+                </div>
+                <button
+                    class="cart w-full bg-black text-white text-xs md:text-sm lg:text-lg font-semibold py-2.5 rounded-lg hover:bg-zinc-800 transition-colors duration-200 shadow-sm">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+
+
+
+            <!-- ======3rd card======= -->
+            <div class="flex flex-col gap-3  font-jakarta-sans text-left lg:gap-8">
+                <div class="relative rounded-xl overflow-hidden shadow-lg ">
+                    <img src="Images/featshoes1.jpeg" alt="Urban Minimalist Loafers"
+                        class="wish  w-36 h-40 object-cover md:h-48 md:w-48 md:object-cover lg:w-60 lg:h-60 border-2 border-gray-200">
+                    <button
+                        class="absolute top-3 right-3 text-slate-700 transition-colors duration-200 focus:outline-none drop-shadow-md hover:text-black">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="wish w-5 h-5 lg:w-7 lg:h-7 transition-colors duration-200">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </button>
+
+                </div>
+                <div class="flex flex-col gap-1 px-1">
+                    <h3
+                        class="text-[12px] tracking-wide font-semibold text-black  leading-tight md:text-base lg:text-lg">
+                        Urban Loafers
+                    </h3>
+                    <span class="text-md font-bold text-[#2563EB] md:text-lg lg:text-2xl ">$199.00</span>
+                </div>
+                <button
+                    class="cart w-full bg-black text-white text-xs md:text-sm lg:text-lg font-semibold py-2.5 rounded-lg hover:bg-zinc-800 transition-colors duration-200 shadow-sm">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+            <!-- ======4th card======= -->
+            <div class="flex flex-col gap-3  font-jakarta-sans text-left lg:gap-8">
+                <div class="relative rounded-xl overflow-hidden shadow-lg ">
+                    <img src="Images/feathead.jpeg" alt="Veloce SoundWave Pro"
+                        class="w-36 h-40 object-cover md:h-48 md:w-48 md:object-cover lg:w-60 lg:h-60 border-2 border-gray-200">
+                    <button
+                        class="absolute top-3 right-3 text-slate-700 transition-colors duration-200 focus:outline-none drop-shadow-md hover:text-black">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="wish w-5 h-5 lg:w-7 lg:h-7 transition-colors duration-200">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+                <div class="flex flex-col gap-1 px-1">
+                    <h3 class="text-sm font-semibold text-black tracking-tight leading-tight md:text-base lg:text-lg">
+                        Veloce SoundWave</h3>
+                    <span class="text-md font-bold text-[#2563EB] md:text-lg lg:text-2xl">$549.00</span>
+                </div>
+                <button
+                    class="cart w-full bg-black text-white text-xs md:text-sm lg:text-lg font-semibold py-2.5 rounded-lg hover:bg-zinc-800 transition-colors duration-200 shadow-sm ">
+                    Add to Cart
+                </button>
+            </div>
+    </section>
+    <section class="py-5 flex items-center justify-center flex-col md:py-11" id="category">
+        <div class="flex flex-col gap-2 items-center justify-center text-center max-w-2xl mx-auto px-4">
+            <span class="text-xl font-bold md:text-2xl lg:text-3xl">Discover Our Collection</span>
+            <span class="text-sm md:text-base md:max-w-sm lg:text-lg lg:max-w-lg">Discover high-quality products
+                designed for your lifestyle. Use the filters to find exactly what you need.</span>
+        </div>
+        <div
+            class="flex flex-col lg:flex-row items-center justify-between py-6 gap-4 lg:gap-10 mx-auto px-4 w-full">
+            <div class="flex justify-center space-x-2">
+                <button
+                    class=" all text-xs md:text-base font-semibold border border-gray-400 px-3 py-1 rounded-full hover:bg-[#2563EB] hover:text-white transition-colors">All</button>
+                <button
+                    class=" bag text-[10px] font-medium md:text-base lg:px-3 border border-gray-400 px-2 py-1 rounded-full hover:bg-[#2563EB] hover:text-white transition-colors">Bags</button>
+                <button
+                    class=" shoes text-[10px] font-medium md:text-base lg:px-3 border border-gray-400 px-2 py-1 rounded-full hover:bg-[#2563EB] hover:text-white transition-colors">Shoes</button>
+                <button
+                    class=" watch text-[10px] font-medium md:text-base lg:px-3 border border-gray-400 px-2 py-1 rounded-full hover:bg-[#2563EB] hover:text-white transition-colors">Watches</button>
+                <button
+                    class=" head text-[10px] font-medium md:text-base lg:px-3 border border-gray-400 px-2 py-1 rounded-full hover:bg-[#2563EB] hover:text-white transition-colors">Headphones</button>
+            </div>
+
+            <div class="relative block w-full max-w-md lg:max-w-xs">
+                <input type="text" id="searchbar" placeholder="Search products..."
+                    class="w-full pl-4 pr-10 py-1.5 text-sm md:text-base border border-gray-400 rounded-full focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB]" />
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
+                    <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.602 10.602Z" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="grid grid-cols-2 gap-x-4 gap-y-6 w-full max-w-md mx-auto px-2 justify-items-center py-5 lg:grid lg:grid-cols-4 lg:grid-rows-2 lg:max-w-7xl lg:gap-y-10 lg:gap-x-3 lg:mx-auto lg:pb-20"
+        id="productgrid">
+    </div>
+
+    </section>
+
+
+    <section
+        class="flex flex-col items-center text-center justify-center py-5 px-2 gap-4 bg-[#2563EB] text-white md:py-11 md:gap-11">
+        <div class="md:flex md:flex-col md:gap-5">
+
+            <span class="text-xl font-bold md:text-2xl lg:text-3xl">Engineered for the Extraordinary</span>
+            <span class="text-md md:text-lg md:max-w-sm lg:text-xl lg:max-w-md">Discover our handpicked seasonal drops
+                built for unmatched
+                style and daily
+                performance.</span>
+        </div>
+        <button
+            class="inline-flex bg-white text-black px-5 py-3 items-center gap-1 text-sm md:text-base font-bold  hover:opacity-80 shadow-lg md:shadow-xl transition-opacity rounded-lg">
+            <span>Explore Collection</span>
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M11.8775 1.85875C11.6737 1.64922 11.5627 1.3721 11.568 1.08577C11.5733 0.799427 11.6944 0.526227 11.9058 0.323724C12.1172 0.121221 12.4024 0.0052243 12.7014 0.000172196C13.0003 -0.00487991 13.2896 0.101407 13.5084 0.29664L19.6625 6.19138C19.8786 6.39862 20 6.67953 20 6.97243C20 7.26533 19.8786 7.54625 19.6625 7.75348L13.5084 13.6482C13.4027 13.7568 13.2753 13.8439 13.1338 13.9043C12.9923 13.9647 12.8395 13.9972 12.6845 13.9998C12.5296 14.0024 12.3757 13.9751 12.232 13.9196C12.0883 13.864 11.9578 13.7812 11.8482 13.6763C11.7387 13.5713 11.6523 13.4463 11.5942 13.3087C11.5362 13.1711 11.5077 13.0236 11.5104 12.8752C11.5132 12.7268 11.5471 12.5805 11.6102 12.4449C11.6732 12.3093 11.7642 12.1873 11.8775 12.0861L16.0624 8.07769H1.1539C0.84787 8.07769 0.55437 7.96125 0.337971 7.75397C0.121572 7.54669 0 7.26556 0 6.97243C0 6.6793 0.121572 6.39817 0.337971 6.19089C0.55437 5.98361 0.84787 5.86717 1.1539 5.86717H16.0624L11.8775 1.85875Z"
+                    fill="black" />
+            </svg>
+        </button>
+    </section>
+
+    <section>
+        <div
+            class="grid grid-cols-2 gap-4 w-full max-w-xl mx-auto py-5 px-2 font-jakarta-sans lg:flex lg:items-center lg:justify-center lg:gap-10 lg:max-w-7xl">
+            <div class="flex flex-col gap-2 bg-[#D9D9D9] p-4 rounded-xl text-left lg:px-5">
+                <svg width="32" height="37" viewBox="0 0 45 38" fill="none" xmlns="http://w3.org">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M37.089 5.52083H32.0208V0H11.0417V3.3125H28.7083V26.7871C27.7698 27.56 27.0742 28.609 26.7319 29.8125H11.914C11.1852 27.2729 8.85542 25.3958 6.07292 25.3958C4.46318 25.3988 2.9202 26.0395 1.78194 27.1778C0.643679 28.316 0.00291885 29.859 0 31.4688C0.00291885 33.0785 0.643679 34.6215 1.78194 35.7597C2.9202 36.898 4.46318 37.5387 6.07292 37.5417C8.84438 37.5417 11.1852 35.6646 11.914 33.125H26.7429C27.4717 35.6646 29.8015 37.5417 32.584 37.5417C35.3665 37.5417 37.6963 35.6646 38.425 33.125H41.4173C42.941 33.125 44.1777 31.8883 44.1777 30.3646V17.7771L37.1 5.52083H37.089ZM35.1788 8.83333L39.6396 16.5625H32.0208V8.83333H35.1788ZM6.07292 34.2292C5.34081 34.2292 4.63869 33.9383 4.12101 33.4207C3.60333 32.903 3.3125 32.2009 3.3125 31.4688C3.3125 30.7366 3.60333 30.0345 4.12101 29.5168C4.63869 28.9992 5.34081 28.7083 6.07292 28.7083C6.80503 28.7083 7.50715 28.9992 8.02483 29.5168C8.54251 30.0345 8.83333 30.7366 8.83333 31.4688C8.83333 32.2009 8.54251 32.903 8.02483 33.4207C7.50715 33.9383 6.80503 34.2292 6.07292 34.2292ZM32.5729 34.2292C31.8408 34.2292 31.1387 33.9383 30.621 33.4207C30.1033 32.903 29.8125 32.2009 29.8125 31.4688C29.8125 30.7366 30.1033 30.0345 30.621 29.5168C31.1387 28.9992 31.8408 28.7083 32.5729 28.7083C33.305 28.7083 34.0072 28.9992 34.5248 29.5168C35.0425 30.0345 35.3333 30.7366 35.3333 31.4688C35.3333 32.2009 35.0425 32.903 34.5248 33.4207C34.0072 33.9383 33.305 34.2292 32.5729 34.2292ZM38.414 29.8125C37.6852 27.2729 35.3554 25.3958 32.5729 25.3958C32.3852 25.3958 32.2085 25.4069 32.0208 25.429V19.875H40.8542V29.8125H38.414ZM22.0833 7.72917H4.41667V11.0417H22.0833V7.72917ZM0 15.4583H13.25V18.7708H0V15.4583Z"
+                        fill="black" />
+                </svg>
+
+                <div class="flex flex-col gap-0.5">
+                    <h4 class="text-xs font-bold text-black tracking-tight md:text-sm lg:text-base">Free Global Shipping
+                    </h4>
+                    <p class="text-[10px] text-zinc-600 leading-tight md:text-xs lg:text-sm">On all orders over $200.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 bg-[#D9D9D9] p-4 rounded-xl text-left md:py-5">
+                <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://w3.org"
+                    class="w-6 h-6 object-contain">
+                    <path
+                        d="M10.845 3.975C8.46387 4.6308 6.099 5.34434 3.75251 6.115C3.53809 6.18415 3.34746 6.31227 3.20244 6.4847C3.05743 6.65712 2.96388 6.86689 2.93251 7.09C1.54751 17.4825 4.74751 25.065 8.56501 30.06C10.1806 32.1966 12.1079 34.0784 14.2825 35.6425C15.1475 36.2525 15.9125 36.6925 16.515 36.975C16.815 37.1167 17.0592 37.215 17.2475 37.27C17.3305 37.2952 17.4148 37.3161 17.5 37.3325C17.5844 37.316 17.6678 37.2951 17.75 37.27C17.94 37.2133 18.185 37.115 18.485 36.975C19.085 36.6925 19.8525 36.25 20.7175 35.6425C22.8921 34.0784 24.8194 32.1966 26.435 30.06C30.2525 25.0675 33.4525 17.4825 32.0675 7.09C32.0361 6.86689 31.9426 6.65712 31.7976 6.4847C31.6526 6.31227 31.4619 6.18415 31.2475 6.115C29.62 5.5825 26.8725 4.715 24.155 3.9775C21.38 3.225 18.8275 2.6675 17.5 2.6675C16.175 2.6675 13.62 3.2225 10.845 3.975ZM10.18 1.4C12.8925 0.6625 15.775 0 17.5 0C19.225 0 22.1075 0.6625 24.82 1.4C27.595 2.15 30.3925 3.0375 32.0375 3.575C32.7253 3.80213 33.335 4.21866 33.7967 4.77675C34.2584 5.33484 34.5533 6.01185 34.6475 6.73C36.1375 17.9225 32.68 26.2175 28.485 31.705C26.7054 34.0518 24.5844 36.1189 22.1925 37.8375C21.3663 38.4336 20.4897 38.9564 19.5725 39.4C18.8725 39.73 18.12 40 17.5 40C16.88 40 16.13 39.73 15.4275 39.4C14.5104 38.9564 13.6337 38.4336 12.8075 37.8375C10.4156 36.1189 8.29462 34.0518 6.51501 31.705C2.32001 26.2175 -1.13749 17.9225 0.352513 6.73C0.446732 6.01185 0.741621 5.33484 1.20331 4.77675C1.66499 4.21866 2.27474 3.80213 2.96251 3.575C5.35065 2.79252 7.75717 2.06732 10.18 1.4Z"
+                        fill="black" />
+                </svg>
+                <div class="flex flex-col gap-0.5">
+                    <h4 class="text-xs font-bold text-black tracking-tight md:text-sm lg:text-base">Secure Checkout</h4>
+                    <p class="text-[10px] text-zinc-600 leading-tight md:text-xs lg:text-sm">100% encrypted payment
+                        methods.</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 bg-[#D9D9D9] p-4 rounded-xl text-left">
+                <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://w3.org"
+                    class="w-6 h-6 object-contain">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M34.8583 16.0192C34.2513 9.7917 30.5696 0 19.1917 0C7.8138 0 4.1321 9.7917 3.52505 16.0192C1.39536 16.8275 -0.00940764 18.8722 4.74362e-05 21.15V23.8917C4.74362e-05 26.9201 2.45506 29.375 5.48335 29.375C8.51173 29.375 10.9667 26.92 10.9667 23.8917V21.15C10.9568 18.9213 9.60375 16.9186 7.5396 16.0779C7.9313 12.4746 9.85049 3.9167 19.1917 3.9167C28.533 3.9167 30.4325 12.4746 30.8242 16.0779C28.7643 16.9205 27.418 18.9245 27.4167 21.15V23.8917C27.4209 24.9235 27.7151 25.9333 28.2657 26.8059C28.8163 27.6785 29.601 28.3787 30.5305 28.8267C29.708 30.3738 27.6125 32.4692 22.4621 33.0958C21.4326 31.5325 19.4407 30.9162 17.7081 31.6249C15.9756 32.3336 14.9867 34.1693 15.348 36.0059C15.7093 37.8426 17.3198 39.1667 19.1917 39.1667C19.9171 39.1626 20.627 38.9573 21.2425 38.5735C21.8579 38.1897 22.3548 37.6425 22.6775 36.9929C31.0788 36.0333 33.7617 31.7054 34.6038 29.1596C36.8819 28.4216 38.4141 26.2862 38.3834 23.8917V21.15C38.3928 18.8722 36.988 16.8275 34.8583 16.0192ZM7.05005 23.8917C7.05005 24.7569 6.34863 25.4583 5.48335 25.4583C4.61807 25.4583 3.91674 24.757 3.91674 23.8917V21.15C3.91516 20.9433 3.95452 20.7382 4.03254 20.5468C4.11056 20.3553 4.22571 20.1812 4.37134 20.0344C4.51698 19.8877 4.69022 19.7712 4.88108 19.6917C5.07194 19.6122 5.27665 19.5713 5.4834 19.5713C5.69015 19.5713 5.89485 19.6122 6.08571 19.6917C6.27658 19.7712 6.44982 19.8877 6.59545 20.0344C6.74108 20.1812 6.85623 20.3553 6.93425 20.5468C7.01228 20.7382 7.05163 20.9433 7.05005 21.15V23.8917ZM31.3334 21.15C31.3334 20.2847 32.0348 19.5833 32.9 19.5833C33.7653 19.5833 34.4667 20.2847 34.4667 21.15V23.8917C34.4667 24.7569 33.7653 25.4583 32.9 25.4583C32.0348 25.4583 31.3334 24.757 31.3334 23.8917V21.15Z"
+                        fill="black" />
+                </svg>
+                <div class="flex flex-col gap-0.5">
+                    <h4 class="text-xs font-bold text-black tracking-tight md:text-sm lg:text-base">24/7 Expert Support
+                    </h4>
+                    <p class="text-[10px] text-zinc-600 leading-tight md:text-xs lg:text-sm">Dedicated customer
+                        assistance anytime.</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 bg-[#D9D9D9] p-4 rounded-xl text-left">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://w3.org"
+                    class="w-7 h-7 object-contain">
+                    <path
+                        d="M0.400391 3.73047C0.136719 3.33984 0 2.87109 0 2.40234C0 1.07422 1.07422 0 2.40234 0H13.0762C14.1699 0 15.1953 0.576172 15.752 1.51367L22.4414 12.6563C17.7344 13.252 13.5254 15.4492 10.3906 18.7012L0.400391 3.73047ZM49.5898 3.73047L39.6094 18.7012C36.4746 15.4492 32.2656 13.252 27.5586 12.6563L34.248 1.51367C34.8145 0.576172 35.8301 0 36.9238 0H47.5977C48.9258 0 50 1.07422 50 2.40234C50 2.87109 49.8633 3.33984 49.5996 3.73047H49.5898ZM7.8125 32.8125C7.8125 28.2541 9.62332 23.8824 12.8466 20.6591C16.0699 17.4358 20.4416 15.625 25 15.625C29.5584 15.625 33.9301 17.4358 37.1534 20.6591C40.3767 23.8824 42.1875 28.2541 42.1875 32.8125C42.1875 37.3709 40.3767 41.7426 37.1534 44.9659C33.9301 48.1892 29.5584 50 25 50C20.4416 50 16.0699 48.1892 12.8466 44.9659C9.62332 41.7426 7.8125 37.3709 7.8125 32.8125ZM25.8203 23.5449C25.4883 22.8613 24.5215 22.8613 24.1797 23.5449L21.9922 27.9785C21.8555 28.252 21.6016 28.4375 21.3086 28.4766L16.4062 29.1895C15.6543 29.2969 15.3613 30.2148 15.8984 30.752L19.4434 34.209C19.6582 34.4238 19.7559 34.7168 19.707 35.0195L18.8672 39.8926C18.7402 40.6348 19.5215 41.2109 20.1953 40.8594L24.5703 38.5547C24.834 38.418 25.1562 38.418 25.4199 38.5547L29.7949 40.8594C30.4688 41.2109 31.25 40.6445 31.123 39.8926L30.2832 35.0195C30.2344 34.7266 30.332 34.4238 30.5469 34.209L34.0918 30.752C34.6387 30.2246 34.3359 29.3066 33.584 29.1895L28.6914 28.4766C28.3984 28.4375 28.1348 28.2422 28.0078 27.9785L25.8203 23.5449Z"
+                        fill="black" />
+                </svg>
+                <div class="flex flex-col gap-0.5">
+                    <h4 class="text-xs font-bold text-black tracking-tight md:text-sm lg:text-base">Lifetime Warranty
+                    </h4>
+                    <p class="text-[10px] text-zinc-600 leading-tight md:text-xs lg:text-sm">Built for long-lasting
+                        luxury.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer
+        class="bg-black text-white px-5 py-10 w-full font-jakarta-sans justify-center items-center flex flex-col gap-8 lg:py-16"
+        id="contact">
+
+        <div class="md:flex md:items-center md:justify-center md:gap-11 lg:items-center lg:justify-center lg:gap-16 ">
+            <div class="flex flex-col gap-2 lg:flex lg:flex-col lg:items-start lg:text-left">
+                <h2 class="text-3xl font-bold font-playfair tracking-wide lg:text-3xl">Veloce <span
+                        class="text-lg font-playfair tracking-normal lg:text-2xl">& Co.</span> </h2>
+                <p class="text-[10px]  uppercase tracking-[0.15em] text-zinc-400 lg:text-lg">Precision in every detail
+                </p>
+                <div class="flex justify-center items-center gap-4 text-white pt-3">
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <svg width="18" height="16" fill="currentColor" viewBox="0 0 24 24" class="lg:h-7 lg:w-7">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" class="lg:h-7 lg:w-7">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="lg:h-7 lg:w-7">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <svg width="18" height="14" fill="currentColor" viewBox="0 0 24 24" class="lg:h-7 lg:w-7">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 pt-4">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-white lg:text-lg">Shop</h3>
+                    <div class="flex flex-col gap-2 text-[11px] text-zinc-400 font-medium lg:text-base">
+                        <a href="#" class="hover:text-white transition-colors">Handbags</a>
+                        <a href="#" class="hover:text-white transition-colors">Watches</a>
+                        <a href="#" class="hover:text-white transition-colors">Shoes</a>
+                        <a href="#" class="hover:text-white transition-colors">Headphones</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-white lg:text-lg">Support</h3>
+                    <div class="flex flex-col gap-2 text-[11px] text-zinc-400 font-medium lg:text-base">
+                        <a href="#" class="hover:text-white transition-colors">Order Status</a>
+                        <a href="#" class="hover:text-white transition-colors">Shipping & Delivery</a>
+                        <a href="#" class="hover:text-white transition-colors">Returns & Exchanges</a>
+                        <a href="#" class="hover:text-white transition-colors">FAQ</a>
+                        <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3 pt-2 w-full max-w-[240px]">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-white lg:text-xl">Stay Updated</h3>
+                <div class="flex flex-col gap-2.5 w-full">
+                    <input type="email" placeholder="Enter your email adress"
+                        class="w-full bg-white text-black placeholder-zinc-500 text-xs px-3 py-2 rounded-none focus:outline-none font-medium lg:text-base lg:px-5 lg:py-3">
+                    <button
+                        class="w-full bg-black border border-zinc-700 text-white text-[10px] font-bold py-2 uppercase tracking-widest hover:bg-zinc-900 transition-colors lg:text-base">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 pt-6 border-t border-zinc-900 lg:text-sm text-[10px] text-zinc-500 tracking-wide lg:flex lg:items-center lg:justify-center">
+            <div>© 2026 Veloce & Co. All rights reserved.</div>
+            <div class="flex gap-2">
+                <a href="#" class="hover:text-zinc-300 transition-colors">Privacy Policy</a>
+                <span>|</span>
+                <a href="#" class="hover:text-zinc-300 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+
+    <script src="app.js"> </script>
+
+
+
+
+</body>
+
+</html>
