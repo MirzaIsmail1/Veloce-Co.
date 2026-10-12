@@ -4,7 +4,7 @@ const products = [
         catagory: "Bags",
         name: "Veloce Leather Tote",
         price: "$299.00",
-        image: "Images/catbag1.jpeg",
+        image: "catbag1.jpeg",
 
     },
     {
@@ -12,7 +12,7 @@ const products = [
         catagory: "Shoes",
         name: "Black Sneakers",
         price: "$199.00",
-        image: "Images/catshoes1.jpeg",
+        image: "catshoes1.jpeg",
 
     },
     {
@@ -20,7 +20,7 @@ const products = [
         catagory: "Watches",
         name: "Classic Noir Watch",
         price: "$349.00",
-        image: "Images/catwatch1.jpeg",
+        image: "catwatch1.jpeg",
 
     },
 
@@ -29,7 +29,7 @@ const products = [
         catagory: "Headphones",
         name: "Veloce Air pro",
         price: "$99.00",
-        image: "Images/cathead1.jpeg",
+        image: "cathead1.jpeg",
 
     },
     {
@@ -37,7 +37,7 @@ const products = [
         catagory: "Watches",
         name: "Vintage Oyster",
         price: "$249.00",
-        image: "Images/catwatch2.jpeg",
+        image: "catwatch2.jpeg",
 
     },
     {
@@ -45,7 +45,7 @@ const products = [
         catagory: "Headphones",
         name: "Wirelesss Headset",
         price: "$120.00",
-        image: "Images/cathead2.jpeg",
+        image: "cathead2.jpeg",
 
     },
     {
@@ -53,7 +53,7 @@ const products = [
         catagory: "Bags",
         name: "Leather Crossbody",
         price: "$749.00",
-        image: "Images/catbag2.jpeg",
+        image: "catbag2.jpeg",
 
     },
     {
@@ -61,7 +61,7 @@ const products = [
         catagory: "Shoes",
         name: "Vogue White",
         price: "$449.00",
-        image: "Images/catshoes2.jpeg",
+        image: "catshoes2.jpeg",
     },
 ]
 
