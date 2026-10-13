@@ -10,7 +10,7 @@ const products = [
     {
         id: 2,
         catagory: "Shoes",
-        name: "Black Sneakers",
+        name: "White Sneakers",
         price: "$199.00",
         image: "catshoes1.jpeg",
 
