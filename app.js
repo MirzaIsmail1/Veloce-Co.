@@ -71,7 +71,7 @@ function renderProducts(productSort) {
 
     const cardHtml = productSort.map(products => {
         return `<div class="${products.catagory} flex flex-col gap-3  font-jakarta text-left">
-            <div class="relative rounded-xl overflow-hidden shadow-lg border-2 border-gray-200">
+            <div class="relative rounded-xl overflow-hidden shadow-lg border-2 border-gray-200 hover:scale-105 transition">
                 <img src="${products.image}" alt="${products.catagory}"
                     class="w-36 h-40 object-cover md:h-48 md:w-48 md:object-cover">
             </div>
